@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- ======= Predictor Section ======= -->
+<section id="predictor" class="predictor section-bg">
+  <div class="container" data-aos="fade-up">
+    
+    <div class="section-title">
+      <h2>Predictor</h2>
+    </div>
+
+    <div class="row">
+      <!-- ======= Input ======= -->
+      <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+        <form action="/predict" method="post" role="form" class="input-form">
+          <div class="parameter">
+              <h2 class="text-center fw-bold">Input Parameter</h2>
+          </div>
+
+          <div class="row">
+            <!-- Input day -->
+            <div class="form-group col-md-4">
+              <label for="day" class="form-label fw-bold">Tanggal terakhir kontak</label>
+              <input type="number" class="form-control" name="day" id="day" min=0 max="31" required>
+            </div>
+            <!-- End of Input day -->
+            
+            <!-- Input month -->
+            <div class="form-group col-md-4">
+              <label for="month" class="form-label fw-bold">Bulan terakhir kontak</label>
+              <input type="number" class="form-control" name="month" id="month" min=0 max="12" required>
+            </div>
+            <!-- End of Input month -->
+            
+            <!-- Input duration -->
+            <div class="form-group col-md-4">
+              <label for="duration" class="form-label fw-bold">Durasi kontak (detik)</label>
+              <input type="number" class="form-control" name="duration"  id="duration" min=0 required>
+            </div>
+            <!-- End of Input duration -->
+          </div>
+
+          <!-- Input balance -->
+          <div class="form-group">
+            <label for="balance" class="form-label fw-bold">Saldo rata-rata tahunan</label>
+            <input type="number" class="form-control" name="balance" id="balance" required>
+          </div>
+          <!-- End of Input balance -->
+          
+          <!-- Input pdays -->
+          <div class="form-group">
+            <label for="pdays" class="form-label fw-bold">Jumlah hari setelah terakhir kali dihubungi</label>
+            <input type="number" class="form-control" name="pdays" id="pdays" min=0 required>
+          </div>
+          <!-- End of Input pdays -->
+
+          <!-- Input previous -->
+          <div class="form-group">
+            <label for="previous" class="form-label fw-bold">Jumlah kontak yang dilakukan dengan pihak bank</label>
+            <input type="number" class="form-control" name="previous" id="previous" min="0" required>
+          </div>
+          <!-- End of Input previous -->
+
+          <!-- Input poutcome -->
+          <div class="form-group">
+            <label for="poutcome" class="form-label fw-bold">Hasil dari pemasaran sebelumnya</label>
+            <select class="form-select mb-3" name='poutcome' id="poutcome" required>
+              <option value="" selected disabled>Select One</option>
+              <option value="1">Tidak Diketahui</option>
+              <option value="2">Lainnya</option>
+              <option value="3">Belum Berhasil</option>
+              <option value="4">Berhasil</option>
+            </select>
+          </div>
+          <!-- End of Input poutcome -->
+          
+          <!-- Input contact -->
+          <div class="form-group">
+            <label for="contact" class="form-label fw-bold">Jenis komunikasi</label>
+            <select class="form-select mb-3" name='contact' id="contact" required>
+            <option value="" selected disabled>Select One</option>
+            <option value="1">Tidak Diketahui</option>
+            <option value="2">Telepon</option>
+            <option value="3">Seluler</option>
+            </select>
+          </div>
+          <!-- End of Input contact -->
+
+          <!-- Button Submit -->
+          <div class="text-center">
+            <button type="submit">Prediksi</button>
+          </div>
+          <!-- End of Button Submit -->
+
+        </form>
+      </div>
+      <!-- End Input -->
+
+      <!-- ======= Result ======= -->
+      <div class="col-lg-5 d-flex align-items-stretch">
+        <div class="result">
+          <h2 class="text-center fw-bold"  style="padding-bottom: 20px;">Prediction Result</h2>
+          <!-- {% if pred_result %} -->
+          <!-- <h3 class="text-center fw-bold">Subscribe Deposit {{pred_score}}% {{pred_result}}</h3> -->
+          <h3 class="text-center fw-bold">Nasabah {{pred_score}}% {{pred_result}} untuk melakukan deposito.</h3>
+          <!-- {% endif %} -->
+        </div>
+      </div>
+      <!-- End Result -->
+    </div>
+
+    <div class="row">
+      <!-- ======= Predictor Manual ======= -->
+      <div class="col-lg-5 d-flex align-items-stretch">
+        <div class="predict-manual">
+            <i class="bx bx-chevron-right"></i> <a href="{{ url_for('predictor_manual') }}" style="font-size: 18px;">Panduan & Informasi</a>
+        </div>
+      </div>
+      <!-- End Predictor Manual -->
+    </div>
+
+  </div>
+</section>
+<!-- End Predictor Section -->
+
+{% endblock %}

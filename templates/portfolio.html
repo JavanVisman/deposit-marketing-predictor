@@ -1,0 +1,230 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio section-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Portofolio</h2>
+    </div>
+
+    <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+      <li data-filter="*" class="filter-active">All</li>
+      <li data-filter=".filter-app">App</li>
+      <li data-filter=".filter-data">Data</li>
+    </ul>
+
+    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/app/app-1.png" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>App 1</h4>
+          <p>Tampilan Beranda</p>
+          <a href="/static/assets/img/portfolio/app/app-1.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_app') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-data">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/data/data-1.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>Data 1</h4>
+          <p>Jumlah Data Perbulan</p>
+          <a href="/static/assets/img/portfolio/data/data-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Data 1"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_data') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/app/app-2.png" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>App 2</h4>
+          <p>Halaman Tentang</p>
+          <a href="/static/assets/img/portfolio/app/app-2.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_app') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-data">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/data/data-2.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>Data 2</h4>
+          <p>Perkiraan Saldo</p>
+          <a href="/static/assets/img/portfolio/data/data-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Data 2"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_data') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/app/app-3.png" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>App 3</h4>
+          <p>Halaman Layanan</p>
+          <a href="/static/assets/img/portfolio/app/app-3.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_app') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/app/app-4.png" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>App 4</h4>
+          <p>Halaman Layanan Informasi</p>
+          <a href="/static/assets/img/portfolio/app/app-4.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 4"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_app') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-data">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/data/data-3.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>Data 3</h4>
+          <p>Jenis Komunikasi</p>
+          <a href="/static/assets/img/portfolio/data/data-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Data 3"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_data') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/app/app-5.png" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>App 5</h4>
+          <p>Halaman Portofolio</p>
+          <a href="/static/assets/img/portfolio/app/app-5.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 5"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_app') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/app/app-6.png" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>App 6</h4>
+          <p>Halaman Portofolio Aplikasi</p>
+          <a href="/static/assets/img/portfolio/app/app-6.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 6"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_app') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-data">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/data/data-4.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>Data 4</h4>
+          <p>Neraca Jenis Komunikasi & Job</p>
+          <a href="/static/assets/img/portfolio/data/data-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Data 4"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_data') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/app/app-7.png" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>App 7</h4>
+          <p>Halaman Portofolio Visualisasi Data</p>
+          <a href="/static/assets/img/portfolio/app/app-7.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 7"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_app') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/app/app-8.png" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>App 8</h4>
+          <p>Halaman Tim</p>
+          <a href="/static/assets/img/portfolio/app/app-8.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 8"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_app') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-data">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/data/data-5.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>Data 5</h4>
+          <p>Hasil Kampanye</p>
+          <a href="/static/assets/img/portfolio/data/data-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Data 5"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_data') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/app/app-9.png" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>App 9</h4>
+          <p>Halaman Kontak</p>
+          <a href="/static/assets/img/portfolio/app/app-9.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 9"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_app') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/app/app-10.png" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>App 10</h4>
+          <p>Halaman Prediksi</p>
+          <a href="/static/assets/img/portfolio/app/app-10.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 10"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_app') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-data">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/data/data-6.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>Data 6</h4>
+          <p>Statistik Kredit Rumah</p>
+          <a href="/static/assets/img/portfolio/data/data-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Data 6"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_data') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img">
+          <img src="/static/assets/img/portfolio/app/app-11.png" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>App 11</h4>
+          <p>Halaman Panduan & Informasi</p>
+          <a href="/static/assets/img/portfolio/app/app-11.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 11"><i class="bx bx-plus"></i></a>
+          <a href="{{ url_for('portfolio_app') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- End Portfolio Section -->
+
+{% endblock %}
